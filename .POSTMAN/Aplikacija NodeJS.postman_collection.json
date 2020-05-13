@@ -1,0 +1,1602 @@
+{
+	"info": {
+		"_postman_id": "48519c02-ccc2-4ca7-942e-43055dc2eb67",
+		"name": "Aplikacija NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Administrator",
+			"item": [
+				{
+					"name": "Get all administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all administrator",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "650"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28a-fCNN3dNZY6pCmEgX3MsAGib5DeA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 09:47:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"administratorId\": 1,\n        \"username\": \"pjakic\",\n        \"passwordHash\": \"67DFF0A3AFC72378144E74778E658A0AB940280D8818F60B9422E0D617D7877D85550F50A7F112121F6356948588D41340C143A5B70688E0AC9C3207712DF0C3\"\n    },\n    {\n        \"administratorId\": 2,\n        \"username\": \"test\",\n        \"passwordHash\": \"ovfjr8gfejgiresjgirsjerg;i\"\n    },\n    {\n        \"administratorId\": 3,\n        \"username\": \"pperic\",\n        \"passwordHash\": \"6A4C0DC4FCC43BDEA28963DF73E4F8351BCDAE08FDA1516234E8D764AF8178A610BCCA2813D204DFF92A43F0511EB0016C7682CCF7B343D99E01739FC26EF104\"\n    },\n    {\n        \"administratorId\": 5,\n        \"username\": \"n milic\",\n        \"passwordHash\": \"6AB6E1E86B8D6DFDCE15BE7862B5D8CA849E408C60AEB2579C82D94CC7D1A1E776C36CAEDD2433707AAF7EA205F21CB96F564070BAFE7EDAC2F08171E69D0FC4\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single administrator",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-b3kCwC4h953u1/2ycQrojcYRWpM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 09:49:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"pjakic\",\n    \"passwordHash\": \"67DFF0A3AFC72378144E74778E658A0AB940280D8818F60B9422E0D617D7877D85550F50A7F112121F6356948588D41340C143A5B70688E0AC9C3207712DF0C3\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a new administrator",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"novikorisnik\",\n\t\"password\": \"NekaTajnaLozinka!\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a new administrator - success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"novikorisnik\",\n\t\"password\": \"NekaTajnaLozinka!\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "193"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c1-002KwLyw07DTUVCbJo6qEaR0EjA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 09:53:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"username\": \"novikorisnik\",\n    \"passwordHash\": \"6A4C0DC4FCC43BDEA28963DF73E4F8351BCDAE08FDA1516234E8D764AF8178A610BCCA2813D204DFF92A43F0511EB0016C7682CCF7B343D99E01739FC26EF104\",\n    \"administratorId\": 7\n}"
+						},
+						{
+							"name": "Add a new administrator - error - username taken",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\": \"novikorisnik\",\n\t\"password\": \"NekaTajnaLofwfwfwzinka!\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-t4k/9UI9MQaVcBQ68YkMUdFYBok\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 10:10:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -1001,\n    \"message\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit an existring administrator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"password\": \"Ovo je neki novi password koji ce biti upisan u bazu podataka\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit an existring administrator",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"password\": \"Ovo je neki novi password koji ce biti upisan u bazu podataka\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "187"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bb-eRBEr3OL9xaF6fOYMPAbFqsHNNs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 10:15:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"administratorId\": 1,\n    \"username\": \"pjakic\",\n    \"passwordHash\": \"4BD41BBA5735E5EFC5D459F53303D5C8914EE4B32D9F439B4AC3F13D1966587DD0FBE9930BC03F4B821D7A9D08DF89E0EFF7EE40FAB1527DAC05121E9442413F\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a non-existring administrator",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/670/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"670",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a non-existring administrator",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/670/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"670",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-TohoSz0THfgyH4V7rCdfcfXcq54\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 10:23:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -1002,\n    \"message\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a single non-existring administrator",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/administrator/670",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"administrator",
+								"670"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single non-existring administrator",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/administrator/670",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"administrator",
+										"670"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-TohoSz0THfgyH4V7rCdfcfXcq54\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Apr 2020 10:28:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"error\",\n    \"statusCode\": -1002,\n    \"message\": null\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d2eb9dc1-6014-46a1-8e81-a3a05e9d6c70",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "83bba8da-ee16-4bf1-9e12-fae4479a15f5",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "POST createFull",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Acme ssd hdd 2TB\",\n\t\"categoryId\": 5,\n\t\"exceprt\": \"Kratak opis proizvoda\",\n\t\"description\": \"Ovo je neki dugacak i veliki opis nekog proizvoda. \",\n\t\"price\": 57.90,\n\t\"features\": [\n\t\t{\n\t\t\t\"featureId\": 1, \"value\": \"2TB\"\n\t\t},\n\t\t{\n\t\t\t\"featuredId\": 3, \"value\": \"SSD\"\n\t\t}\n\t\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/createFull",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"createFull"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "POST createFull",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Acme ssd hdd 2TB\",\n\t\"categoryId\": 5,\n\t\"exceprt\": \"Kratak opis proizvoda\",\n\t\"description\": \"Ovo je neki dugacak i veliki opis nekog proizvoda. \",\n\t\"price\": 57.90,\n\t\"features\": [\n\t\t{\n\t\t\t\"featureId\": 1, \"value\": \"2TB\"\n\t\t},\n\t\t{\n\t\t\t\"featuredId\": 3, \"value\": \"SSD\"\n\t\t}\n\t\t]\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/createFull",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"createFull"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "600"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"258-TcKI/cAyNQCRf5wGp7zw5jKWFzg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 23 Apr 2020 10:11:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 6,\n    \"name\": \"Acme ssd hdd 2TB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Kratak opis proizvoda\",\n    \"description\": \"Ovo je neki dugacak i veliki opis nekog proizvoda. \",\n    \"status\": \"available\",\n    \"isPromoted\": 0,\n    \"createdAt\": \"2020-04-23T10:11:15.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 11,\n            \"articleId\": 6,\n            \"featureId\": 1,\n            \"value\": \"2TB\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 7,\n            \"articleId\": 6,\n            \"price\": \"57.90\",\n            \"createdAt\": \"2020-04-23T10:11:15.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload article photo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "photo",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/pjakic/Downloads/slika-ssd.jpg"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/2/uploadPhoto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"2",
+								"uploadPhoto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a singe article photo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/article/4/deletePhoto/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"4",
+								"deletePhoto",
+								"35"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete a singe article photo",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/article/4/deletePhoto/35",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"4",
+										"deletePhoto",
+										"35"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "61"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3d-EPvOlDLL44snnM4WQSDM7EsUZSQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 10:26:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"ok\",\n    \"statusCode\": 0,\n    \"message\": \"One photo deleted!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single article without editing features",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"name\": \"Acme SDD HDD 1MB\",\r\n    \"categoryId\": \"5\",\r\n    \"excerpt\": \"Ovo je sada neki novi opis\",\r\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\r\n    \"status\": \"available\",\r\n    \"isPromoted\": 1,\r\n    \"price\": \"55.25\",\r\n    \"features\": null\r\n }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single article without editing features",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n  \"name\": \"Acme SDD HDD 1MB\",\r\n    \"categoryId\": \"5\",\r\n    \"excerpt\": \"Ovo je sada neki novi opis\",\r\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\r\n    \"status\": \"available\",\r\n    \"isPromoted\": 1,\r\n    \"price\": \"55.25\",\r\n    \"features\": null\r\n }"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2702"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8e-3JU0+uOZ0jKt0FLJ6IdUXpc40mU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 11:05:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 2,\n    \"name\": \"Acme SDD HDD 1MB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Ovo je sada neki novi opis\",\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\n    \"status\": \"available\",\n    \"isPromoted\": 1,\n    \"createdAt\": \"2020-04-22T12:20:50.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 4,\n            \"articleId\": 2,\n            \"featureId\": 1,\n            \"value\": \"1TB\"\n        },\n        {\n            \"articleFeatureId\": 5,\n            \"articleId\": 2,\n            \"featureId\": 3,\n            \"value\": \"SSD\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        },\n        {\n            \"featureId\": 3,\n            \"name\": \"Tehnologija\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 3,\n            \"articleId\": 2,\n            \"price\": \"0.00\",\n            \"createdAt\": \"2020-04-22T12:20:50.000Z\"\n        },\n        {\n            \"articlePriceId\": 8,\n            \"articleId\": 2,\n            \"price\": \"55.25\",\n            \"createdAt\": \"2020-05-07T11:05:23.000Z\"\n        }\n    ],\n    \"photos\": [\n        {\n            \"photoId\": 3,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-4332487358--\"\n        },\n        {\n            \"photoId\": 4,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-0605726216--\"\n        },\n        {\n            \"photoId\": 5,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-5406038597--\"\n        },\n        {\n            \"photoId\": 6,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-5116271676--\"\n        },\n        {\n            \"photoId\": 7,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-3728458422--\"\n        },\n        {\n            \"photoId\": 8,\n            \"articleId\": 2,\n            \"imagePath\": \"202053-6236228325--\"\n        },\n        {\n            \"photoId\": 9,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8794787669--\"\n        },\n        {\n            \"photoId\": 10,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8758754831--\"\n        },\n        {\n            \"photoId\": 11,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8483722902--\"\n        },\n        {\n            \"photoId\": 12,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2211277131--\"\n        },\n        {\n            \"photoId\": 13,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5367958139--\"\n        },\n        {\n            \"photoId\": 14,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-9813774435--\"\n        },\n        {\n            \"photoId\": 15,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8253662677-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 16,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-9388512167-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 17,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5625175427-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 18,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8884603438-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 19,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5462865638-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 20,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-0784213737-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 21,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2063244792-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 22,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2263424116-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 23,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-1064237771-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 24,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5684458184-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 25,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8231543371-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 26,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-3974785591-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 27,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-1582587537-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 30,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-8471481877-slika-ssd.jpg\"\n        },\n        {\n            \"photoId\": 31,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-6293651326-planaktivnosti.vsdx.png\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single article with editing features",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n  \"name\": \"Acme SDD HDD 1MB\",\r\n    \"categoryId\": \"5\",\r\n    \"excerpt\": \"Ovo je sada neki novi opis\",\r\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\r\n    \"status\": \"available\",\r\n    \"isPromoted\": 1,\r\n    \"price\": \"55.25\",\r\n    \"features\": [\r\n    \t{\r\n    \t\t\"featureId\": 1,\r\n    \t\t\"value\": \"1MB\"\r\n    \t},\r\n    \t\t{\r\n    \t\t\"featureId\": 3,\r\n    \t\t\"value\": \"SSD novi\"\r\n    \t}\r\n    \t]\r\n }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/article/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"article",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single article with editing features",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": " {\r\n  \"name\": \"Acme SDD HDD 1MB\",\r\n    \"categoryId\": \"5\",\r\n    \"excerpt\": \"Ovo je sada neki novi opis\",\r\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\r\n    \"status\": \"available\",\r\n    \"isPromoted\": 1,\r\n    \"price\": \"55.25\",\r\n    \"features\": [\r\n    \t{\r\n    \t\t\"featureId\": 1,\r\n    \t\t\"value\": \"1MB\"\r\n    \t},\r\n    \t\t{\r\n    \t\t\"featureId\": 3,\r\n    \t\t\"value\": \"SSD novi\"\r\n    \t}\r\n    \t]\r\n }"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/article/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"article",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2709"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a95-Lw1+ozeGpG0YSyvB7lm80lWF+cc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 11:12:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"articleId\": 2,\n    \"name\": \"Acme SDD HDD 1MB\",\n    \"categoryId\": 5,\n    \"excerpt\": \"Ovo je sada neki novi opis\",\n    \"description\": \"Ovo je opet novi duzi opis preko Postmana\",\n    \"status\": \"available\",\n    \"isPromoted\": 1,\n    \"createdAt\": \"2020-04-22T12:20:50.000Z\",\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    },\n    \"articleFeatures\": [\n        {\n            \"articleFeatureId\": 15,\n            \"articleId\": 2,\n            \"featureId\": 1,\n            \"value\": \"1MB\"\n        },\n        {\n            \"articleFeatureId\": 16,\n            \"articleId\": 2,\n            \"featureId\": 3,\n            \"value\": \"SSD novi\"\n        }\n    ],\n    \"features\": [\n        {\n            \"featureId\": 1,\n            \"name\": \"Kapacitet\",\n            \"categoryId\": 5\n        },\n        {\n            \"featureId\": 3,\n            \"name\": \"Tehnologija\",\n            \"categoryId\": 5\n        }\n    ],\n    \"articlePrices\": [\n        {\n            \"articlePriceId\": 3,\n            \"articleId\": 2,\n            \"price\": \"0.00\",\n            \"createdAt\": \"2020-04-22T12:20:50.000Z\"\n        },\n        {\n            \"articlePriceId\": 8,\n            \"articleId\": 2,\n            \"price\": \"55.25\",\n            \"createdAt\": \"2020-05-07T11:05:23.000Z\"\n        }\n    ],\n    \"photos\": [\n        {\n            \"photoId\": 3,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-4332487358--\"\n        },\n        {\n            \"photoId\": 4,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-0605726216--\"\n        },\n        {\n            \"photoId\": 5,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-5406038597--\"\n        },\n        {\n            \"photoId\": 6,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-5116271676--\"\n        },\n        {\n            \"photoId\": 7,\n            \"articleId\": 2,\n            \"imagePath\": \"2020430-3728458422--\"\n        },\n        {\n            \"photoId\": 8,\n            \"articleId\": 2,\n            \"imagePath\": \"202053-6236228325--\"\n        },\n        {\n            \"photoId\": 9,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8794787669--\"\n        },\n        {\n            \"photoId\": 10,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8758754831--\"\n        },\n        {\n            \"photoId\": 11,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8483722902--\"\n        },\n        {\n            \"photoId\": 12,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2211277131--\"\n        },\n        {\n            \"photoId\": 13,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5367958139--\"\n        },\n        {\n            \"photoId\": 14,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-9813774435--\"\n        },\n        {\n            \"photoId\": 15,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8253662677-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 16,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-9388512167-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 17,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5625175427-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 18,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8884603438-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 19,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5462865638-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 20,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-0784213737-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 21,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2063244792-krf-kasiopi.jpg\"\n        },\n        {\n            \"photoId\": 22,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-2263424116-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 23,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-1064237771-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 24,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-5684458184-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 25,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-8231543371-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 26,\n            \"articleId\": 2,\n            \"imagePath\": \"202054-3974785591-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 27,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-1582587537-dscn4205.jpg\"\n        },\n        {\n            \"photoId\": 30,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-8471481877-slika-ssd.jpg\"\n        },\n        {\n            \"photoId\": 31,\n            \"articleId\": 2,\n            \"imagePath\": \"202056-6293651326-planaktivnosti.vsdx.png\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bde8480e-79d6-4c10-8bae-094ce17e68e8",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cf98d2e0-b34e-40b2-82c2-2c2df45e64d7",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Administrator Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\": \"novi\",\n\t\"password\": \"novi\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/administrator/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"administrator",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"email\": \"pera@peric,com\",\r\n    \"password\": \"123\"\r\n }"
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register a new user account",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n    \"email\": \"pera@peric,com\",\r\n    \"password\": \"123\",\r\n    \"forename\": \"Pera\",\r\n    \"surname\": \"Peric\",\r\n    \"phoneNumber\": \"5145815158\",\r\n    \"postalAddress\": \"Neka adresa 123\"\r\n    }\r\n    "
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register a new user account",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n    \"email\": \"pera@peric,com\",\r\n    \"password\": \"123\",\r\n    \"forename\": \"Pera\",\r\n    \"surname\": \"Peric\",\r\n    \"phoneNumber\": \"5145815158\",\r\n    \"postalAddress\": \"Neka adresa 123\"\r\n    }\r\n    "
+								},
+								"url": {
+									"raw": "http://localhost:3000/auth/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"user",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"118-ladLP/z+hwjkJi0Bc+/JDd2WQVk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 13 May 2020 17:34:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email\": \"pera@peric,com\",\n    \"passwordHash\": \"3C9909AFEC25354D551DAE21590BB26E38D53F2173B8D3DC3EEE4C047E7AB1C1EB8B85103E3BE7BA613B31BB5C9C36214DC9F14A42FD7A2FDB84856BCA5C44C2\",\n    \"forename\": \"Pera\",\n    \"surname\": \"Peric\",\n    \"phoneNumber\": \"5145815158\",\n    \"postalAddress\": \"Neka adresa 123\",\n    \"userId\": 3\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "b6dafd7b-7b84-4877-8375-c0fc7cecf71b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b7fac3f-a906-450c-be9d-409e8db9cb46",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Feature",
+			"item": [
+				{
+					"name": "Get all features",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/feature",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all features",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/feature",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "633"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"279-/C4t4me0uNdhJVptmPCAT5egwmU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 09:55:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"featureId\": 1,\n        \"name\": \"Kapacitet\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    },\n    {\n        \"featureId\": 4,\n        \"name\": \"Napon\",\n        \"categoryId\": 2,\n        \"category\": {\n            \"categoryId\": 2,\n            \"name\": \"Kućna elektronika\",\n            \"imagePath\": \"assets/home.jpg\",\n            \"parentCategoryId\": null\n        }\n    },\n    {\n        \"featureId\": 3,\n        \"name\": \"Tehnologija\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    },\n    {\n        \"featureId\": 2,\n        \"name\": \"Tip\",\n        \"categoryId\": 5,\n        \"category\": {\n            \"categoryId\": 5,\n            \"name\": \"Hard diskovi\",\n            \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n            \"parentCategoryId\": 4\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a single feature",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/feature/1/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								"1",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a single feature",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/feature/1/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature",
+										"1",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "159"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f-+sRxfMfegkjR70HOGfWBYbUt8qw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 09:57:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"featureId\": 1,\n    \"name\": \"Kapacitet\",\n    \"categoryId\": 5,\n    \"category\": {\n        \"categoryId\": 5,\n        \"name\": \"Hard diskovi\",\n        \"imagePath\": \"assets/pc/memory/hdd.jpg\",\n        \"parentCategoryId\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add a new feature",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Produzni kabl\",\n\t\"categoryId\": 2\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/feature",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add a new feature",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Produzni kabl\",\n\t\"categoryId\": 2\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/feature",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "163"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a3-WrAtjVc8cL9ZKA6UKbNI7eTqUm8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 10:00:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"featureId\": 5,\n    \"name\": \"Produzni kabl\",\n    \"categoryId\": 2,\n    \"category\": {\n        \"categoryId\": 2,\n        \"name\": \"Kućna elektronika\",\n        \"imagePath\": \"assets/home.jpg\",\n        \"parentCategoryId\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit a single feature",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Kabl\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/feature/5/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"feature",
+								"5",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit a single feature",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"Kabl\"\n}"
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/feature/5/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"feature",
+										"5",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "154"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9a-c6yHxUG2d+/ccvoZU3398iOW2aw\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 07 May 2020 10:01:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"featureId\": 5,\n    \"name\": \"Kabl\",\n    \"categoryId\": 2,\n    \"category\": {\n        \"categoryId\": 2,\n        \"name\": \"Kućna elektronika\",\n        \"imagePath\": \"assets/home.jpg\",\n        \"parentCategoryId\": null\n    }\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "d3e8b58e-12c2-45d1-8500-80d9d7c9163f",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e44bf169-47a7-4fbc-8335-ae904ec6072a",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWRlbnRpdHkiOiJwZXJhQHBlcmljLGNvbSIsImV4cCI6MTU5MDYwMzgzMS4xNDMsImlwIjoiOjoxIiwidWEiOiJQb3N0bWFuUnVudGltZS83LjI0LjEiLCJpYXQiOjE1ODkzOTQyMzF9.qDA6wnMuaoOnvaWU2GRebrzUa1cDcp-S1e1yI365UmU",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bc849a13-2f9e-41c7-bfe6-3ab665349423",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "5e80f7e7-4541-4831-985b-7410940f0067",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
